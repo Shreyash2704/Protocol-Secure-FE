@@ -4,6 +4,7 @@
     width:100%;
     padding: 20px 70px;
     background-color: transparent;
+    display: flex;
 }
 .leftSection{
     display: flex;
@@ -30,4 +31,34 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #FC74FE;
+}
+.rightSection{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    margin-left: auto;
+}
+.rightSection button{
+    padding: 10px 16px;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+.rightSection .initite-freeze{
+    background-color: #068940;
+    border: 1px solid #5BE799;
+}
+.rightSection .list-protocol{
+    background-color: #424040;
+    border: 1px solid #5C635F;
+}
+.rightSection .connect-wallet{
+    background-color: #FC74FE;
+    border: 1px solid #F7B0F8;
 }

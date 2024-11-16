@@ -122,6 +122,22 @@ type ColumnType = {
 }
 type ColumnsType = ColumnType[]
 
+type dataType ={
+  guid: string;
+  projectName: string;
+  email: string | null;
+  logoURL: string;
+  transactionHash: string | null;
+  status: string | null;
+  contractAddress: string;
+  chainID: string | null;
+  bountyAmt: number;
+  tokenSymbol: string;
+  mediatator: string;
+  createdAt: string; // ISO date string
+  updatedAt: string; // ISO date string
+  id: string;
+}
 export type {
   chainType,
   Network,
@@ -138,5 +154,6 @@ export type {
   TotalChainVolume,
   rewardsType,
   ColumnsType,
-  ColumnType
+  ColumnType,
+  dataType
 };

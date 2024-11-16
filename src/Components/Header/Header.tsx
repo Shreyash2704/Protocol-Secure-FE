@@ -21,6 +21,11 @@ const Header = (props: Props) => {
 
             
         </div>
+        <div className="rightSection">
+            <button className='initite-freeze'>Initiate Freeze</button>
+            <button className='list-protocol'>List Protocol</button>
+            <button className='connect-wallet'>Connect Wallet</button>
+        </div>
     </div>
   )
 }

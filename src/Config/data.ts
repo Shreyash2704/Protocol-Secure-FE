@@ -14,6 +14,7 @@ import movementLogo from '../assets/chains/movement-testnet-token.svg'
 import abstractLogo from '../assets/chains/abstract.png'
 import sonieumLogo from '../assets/chains/soneium.jpg'
 import { ImageMapType, Networks } from "./types";
+import protoIcon from '../assets/app/header/logo.svg'
 
 const iconMap: ImageMapType = {
   "42161": arbitumlogo,
@@ -281,17 +282,25 @@ const ChainJsonData: Networks = {
 };
 const MAINTAINER_ENUM = {
   GOV: {
-    'address':'',
-    'label':'gov'
+    'address':'0x875C02095ABB53428aa56A59FE6C8E712F48C762',
+    'label':'governance',
+    'icon':protoIcon,
   },
   SEAL911:{
-    'address':'',
-    'label':'seal_911'
+    'address':'0x875C02095ABB53428aa56A59FE6C8E712F48C762',
+    'label':'Seal 911',
+    icon:protoIcon
   },
   PROTO_SECURE:{
-    'address':'',
-    'label':'proto_secure'
-  } 
+    'address':'0x875C02095ABB53428aa56A59FE6C8E712F48C762',
+    'label':'Proto Secure',
+    'icon':protoIcon
+  } ,
+  NOUNS_DOA:{
+    'lable':'nouns doa',
+    'address':'0x875C02095ABB53428aa56A59FE6C8E712F48C762',
+    'icon':protoIcon
+  }
 };
 
 export { iconMap, ChainJsonData, MAINTAINER_ENUM };
