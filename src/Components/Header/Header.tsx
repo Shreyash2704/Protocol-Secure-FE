@@ -37,6 +37,7 @@ const Header = (props: Props) => {
                 }
                 
                 }}>{address ? address : "Connect Wallet"}</button>
+                <w3m-button />
         </div>
     </div>
   )
