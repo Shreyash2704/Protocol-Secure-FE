@@ -261,7 +261,7 @@ const PauseApp = (props: Props) => {
             <Menu>
               <label>Select Mediator</label>
               <MenuButton as={Button}>
-                <Image objectFit="cover" src={mediatoricon} alt="logo" />
+                <Image objectFit="cover" src={mediatoricon} alt="logo" sx={{borderRadius:"0% !important"}} />
                 {mediator}
                 <Image
                   boxSize={"20px"}
