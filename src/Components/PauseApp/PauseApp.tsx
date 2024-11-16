@@ -18,8 +18,11 @@ import groupicon from "../../assets/app/group_icon.svg";
 import ddicon from "../../assets/app/chevron-down.svg";
 import mediatoricon from "../../assets/app/mediator.svg";
 import { iconMap, MAINTAINER_ENUM } from "../../Config/data";
-import { useChains } from "wagmi";
+import { useChains, useTransactionReceipt, useWriteContract } from "wagmi";
 import axios from "axios";
+import {abi2} from '../../Config/abi'
+import { parseEther } from "ethers";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
 type Props = {};
 
 type obj = {
@@ -45,7 +48,14 @@ const PauseApp = (props: Props) => {
     status: "active",
     email: "",
   };
+  const { writeContract, data:hashData, isPending, isSuccess, status } =
+    useWriteContract();
+
+  const { data: txReceiptData } = useTransactionReceipt({
+    hash: hashData
+  })
   const [data, setdata] = useState<obj>(initialVal);
+  const { open, close } = useWeb3Modal();
 
   const AllFilled = () => {
     if (
@@ -80,12 +90,12 @@ const PauseApp = (props: Props) => {
       [name]: value, // Dynamically update the key-value pair
     }));
   };
-  const onSubmit = () =>{
+  const onSubmit = async() =>{
     console.log(data)
     const obj = {
         "formData":data
     }
-    callApi(obj)
+    await callApi(obj)
   }
   const callApi = async (obj:any) => {
     const url = "https://proto-secure-backend-api.onrender.com/api/submit-form";
@@ -101,11 +111,47 @@ const PauseApp = (props: Props) => {
     // };
     const res = await axios.post(url, obj);
     console.log("res",res)
+    if(res.status === 200){
+      console.log("contact call")
+        await callContract()
+    }
   };
+
+  const callContract = async() =>{
+    console.log("bouty amoutn",data.bountyAmt)
+    if (data.bountyAmt !== undefined){
+
+    try {
+        const result = await writeContract({
+          abi2,
+          functionName: "bridgeTo",
+          args: [
+            data.contractAddress,
+            data.mediatator
+          ],
+          //@ts-ignore
+          value:  parseEther(data.bountyAmt),
+        });
+        // setopenTransactionPopup(true);
+      } catch (err) {
+        console.log("err", err);
+      }
+
+    }
+  }
 
   useEffect(() => {
     AllFilled();
   }, [data]);
+
+  useEffect(() => {
+   console.log("callContract txReceiptData",txReceiptData)
+  }, [txReceiptData])
+
+  useEffect(() => {
+    console.log("callContract hashData",hashData)
+   }, [hashData])
+  
 
   const Chains = useChains();
   const [selectNetwork, setselectNetwork] = useState<any>(null);

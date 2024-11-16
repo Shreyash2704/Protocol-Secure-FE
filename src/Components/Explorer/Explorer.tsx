@@ -33,6 +33,7 @@ const Explorer = (props: Props) => {
         const res = await axios.get(url)
         console.log("fetchData",res)
         setdata(res.data)
+        
     }
 
     useEffect(() => {
