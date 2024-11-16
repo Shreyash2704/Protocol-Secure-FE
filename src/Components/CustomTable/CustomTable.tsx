@@ -52,21 +52,6 @@ const CustomTable = ({preClass,columns,data}: Props) => {
             </tr>
           </thead>
           <tbody>
-           
-                <tr>
-                  <td>
-                    aaaaaa
-                  </td>
-                  <td>
-                    bbbb
-                  </td>
-                  <td>
-                    ccccccccc
-                  </td>
-                  <td>
-                    dddddddddddd
-                  </td>
-                </tr>
                 {data && data.map(ele =>{
                     return<>
                     <tr>

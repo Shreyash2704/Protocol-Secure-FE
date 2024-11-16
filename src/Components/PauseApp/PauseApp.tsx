@@ -56,6 +56,7 @@ const PauseApp = (props: Props) => {
   })
   const [data, setdata] = useState<obj>(initialVal);
   const { open, close } = useWeb3Modal();
+  const [mediator, setmediator] = useState("")
 
   const AllFilled = () => {
     if (
@@ -173,7 +174,7 @@ const PauseApp = (props: Props) => {
             {/* <FormHelperText></FormHelperText> */}
           </FormControl>
 
-          <div>
+          <div className="dropdown">
             <Menu>
               <label>Select Network</label>
               <MenuButton as={Button}>
@@ -256,12 +257,12 @@ const PauseApp = (props: Props) => {
             />
             {/* <FormHelperText></FormHelperText> */}
           </FormControl>
-          <div>
+          <div className="dropdown">
             <Menu>
               <label>Select Mediator</label>
               <MenuButton as={Button}>
                 <Image objectFit="cover" src={mediatoricon} alt="logo" />
-
+                {mediator}
                 <Image
                   boxSize={"20px"}
                   objectFit="cover"
@@ -277,6 +278,7 @@ const PauseApp = (props: Props) => {
                 <MenuItem
                   onClick={() => {
                     handleOnChange("mediatator", MAINTAINER_ENUM.GOV.address);
+                    setmediator(MAINTAINER_ENUM.GOV.label)
                   }}
                 >
                   <Image
@@ -292,6 +294,7 @@ const PauseApp = (props: Props) => {
                       "mediatator",
                       MAINTAINER_ENUM.PROTO_SECURE.address
                     );
+                    setmediator(MAINTAINER_ENUM.PROTO_SECURE.label)
                   }}
                 >
                   <Image
@@ -308,6 +311,7 @@ const PauseApp = (props: Props) => {
                       "mediatator",
                       MAINTAINER_ENUM.SEAL911.address
                     );
+                    setmediator(MAINTAINER_ENUM.SEAL911.label)
                   }}
                 >
                   <Image

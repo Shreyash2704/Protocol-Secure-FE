@@ -2,13 +2,16 @@
     display: flex;
     padding-top: 100px;
     margin:0px auto;
-    width:calc(100% - 140px)
+    width:calc(100% - 140px);
+    justify-content: center;
+    align-items: center;
 }
 .form{
-    width: 310px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    
 }
 .headline{
     font-family: Instrument Serif;
@@ -57,7 +60,7 @@
 }
 .chakra-menu__menu-button{
     background-color: #424040 !important;
-    width: 310px;
+    width: 500px;
     box-shadow: 0px 0px 0px 1px #FFFFFF21, 0px 1px 2px 0px #EEEFF114;
 }
 .chakra-menu__menu-button span{
@@ -79,7 +82,7 @@
 .chakra-menu__menu-list{
     box-shadow: 0px 0px 0px 1px #FFFFFF21, 0px 1px 2px 0px #EEEFF114 !important;
     background-color: #424040 !important;
-    width: 310px;
+    width: 500px;
     border: none;
 }
 .chakra-menu__menu-list button{
@@ -127,4 +130,8 @@
 .form .form-save:disabled{
     background-color: #FC74FE66;
     pointer-events: none;
+}
+.form .dropdown{
+    display: flex;
+    flex-direction: column;
 }

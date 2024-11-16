@@ -83,7 +83,9 @@
 .ExplorerRoot .explorer.table-container{
     border:none;
 }
-.ExplorerRoot .explorer table tbody tr td button.freeze{
+.ExplorerRoot .explorer table tbody tr td button.freeze,
+.ExplorerRoot .explorer table tbody tr td button.switch-network,
+.ExplorerRoot .explorer table tbody tr td button.connect-button{
     padding: 10px 16px;
     font-family: SF Pro Display;
     font-size: 16px;

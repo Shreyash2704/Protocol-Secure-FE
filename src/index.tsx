@@ -100,33 +100,33 @@ if (process.env.REACT_APP_SERVER == "testnet") {
       explorer: ChainJsonData["2810"].explorer,
       liquidityPool: ChainJsonData["2810"].liquidityPool,
     },
-    {
-      ...kakarotSepolia,
-      iconUrl: karakotlogo,
-      contractAddress: ChainJsonData["920637907288165"].routerContract,
-      explorer: ChainJsonData["920637907288165"].explorer,
-      liquidityPool: ChainJsonData["920637907288165"].liquidityPool,
-    },
+    // {
+    //   ...kakarotSepolia,
+    //   iconUrl: karakotlogo,
+    //   contractAddress: ChainJsonData["920637907288165"].routerContract,
+    //   explorer: ChainJsonData["920637907288165"].explorer,
+    //   liquidityPool: ChainJsonData["920637907288165"].liquidityPool,
+    // },
     // {
     //   ...berachainTestnet,
     //   iconUrl: berachianlogo,
     //   contractAddress: ChainJsonData["80085"].routerContract,
     //   explorer:ChainJsonData["80085"].explorer
     // }
-    {
-      ...MovementTestnet,
-      iconUrl: movementtestnetlogo,
-      contractAddress: ChainJsonData["30732"].routerContract,
-      explorer: ChainJsonData["30732"].explorer,
-      liquidityPool: ChainJsonData["30732"].liquidityPool,
-    },
-    {
-      ...BerachainTestnet,
-      iconUrl: berachianlogo,
-      contractAddress: ChainJsonData["80084"].routerContract,
-      explorer: ChainJsonData["80084"].explorer,
-      liquidityPool: ChainJsonData["80084"].liquidityPool,
-    },
+    // {
+    //   ...MovementTestnet,
+    //   iconUrl: movementtestnetlogo,
+    //   contractAddress: ChainJsonData["30732"].routerContract,
+    //   explorer: ChainJsonData["30732"].explorer,
+    //   liquidityPool: ChainJsonData["30732"].liquidityPool,
+    // },
+    // {
+    //   ...BerachainTestnet,
+    //   iconUrl: berachianlogo,
+    //   contractAddress: ChainJsonData["80084"].routerContract,
+    //   explorer: ChainJsonData["80084"].explorer,
+    //   liquidityPool: ChainJsonData["80084"].liquidityPool,
+    // },
     {
       ...sepolia,
       iconUrl: sepolialogo,
@@ -141,13 +141,13 @@ if (process.env.REACT_APP_SERVER == "testnet") {
     //   explorer:ChainJsonData["11124"].explorer,
     //   liquidityPool:ChainJsonData["11124"].liquidityPool
     // },
-    {
-      ...SoneiumTestnet,
-      iconUrl: sonieumlogo,
-      contractAddress: ChainJsonData["1946"].routerContract,
-      explorer: ChainJsonData["1946"].explorer,
-      liquidityPool: ChainJsonData["1946"].liquidityPool,
-    },
+    // {
+    //   ...SoneiumTestnet,
+    //   iconUrl: sonieumlogo,
+    //   contractAddress: ChainJsonData["1946"].routerContract,
+    //   explorer: ChainJsonData["1946"].explorer,
+    //   liquidityPool: ChainJsonData["1946"].liquidityPool,
+    // },
     {
       ...bitkubTestnet,
     },

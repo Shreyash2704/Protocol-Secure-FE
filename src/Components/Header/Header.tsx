@@ -26,8 +26,8 @@ const Header = (props: Props) => {
             
         </div>
         <div className="rightSection">
-            <a className='explorer' href="/explorer">Explorer</a>
-            <a className='initite-freeze' href="/">Initiate Freeze</a>
+            {/* <a className='explorer' href="/explorer">Explorer</a> */}
+            <a className='initite-freeze' href="/explorer">Explorer</a>
             <a className='list-protocol' href="/listProtocol">List Protocol</a>
             {/* <a className='connect-wallet'
              onClick={() =>{ 
