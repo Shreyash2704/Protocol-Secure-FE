@@ -1,6 +1,33 @@
 
 .bannerSection{
-    background: url('../../assets/app/pngwing.com\ 1.png') no-repeat #424040;
+    background: url('../../assets/app/pngwing.com\ 1.png') no-repeat #282727;
     background-size: cover;
     height: 976.01px;
+}
+.text{
+    position: absolute;
+    top:34%;
+    left: 42%;
+}
+.text2{
+    font-family: Instrument Serif;
+    font-size: 96px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 124.8px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#fff
+}
+.text1{
+    font-family: SF Pro Display;
+font-size: 20px;
+font-weight: 500;
+line-height: 23.87px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+    color:#fff
 }

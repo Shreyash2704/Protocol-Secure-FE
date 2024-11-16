@@ -15,7 +15,17 @@ const LandingPage = (props: Props) => {
                src={logo}
                boxSize={"160px"}
                alt={"logo"}
+               sx={{
+                position:"absolute",
+                left:"calc(50% - 80px)",
+                top:"18%"
+               }}
             />
+            <div className="text">
+              <div className="text1">secure your</div>
+              <div className="text2">Protocol</div>
+            </div>
+            
             
             </div>
             

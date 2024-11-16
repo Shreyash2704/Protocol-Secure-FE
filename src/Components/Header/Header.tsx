@@ -13,6 +13,7 @@ const Header = (props: Props) => {
   return (
     <div className='HeaderRoot'>
         <div className="leftSection">
+            <a href="/">
             <Image
                 boxSize='25px'
                 objectFit='cover'
@@ -22,6 +23,8 @@ const Header = (props: Props) => {
             <div className='tag'>
             Proto<span>Secure</span>
             </div>
+            </a>
+           
 
             
         </div>
