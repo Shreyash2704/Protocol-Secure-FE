@@ -98,7 +98,7 @@ const PauseApp = (props: Props) => {
     await callApi(obj)
   }
   const callApi = async (obj:any) => {
-    const url = "https://proto-secure-backend-api.onrender.com/api/submit-form";
+    const url = "https://proto-secure-backend-api-production.up.railway.app/api/submit-form";
     // const body = {
     //   projectName: "yes is good",
     //   logoURL: "NO",

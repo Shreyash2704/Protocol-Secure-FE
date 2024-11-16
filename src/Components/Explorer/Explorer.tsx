@@ -29,7 +29,7 @@ const Explorer = (props: Props) => {
 
     const [data, setdata] = useState<null | dataType[]>(null)
     const fetchData = async() =>{
-        const url ="https://proto-secure-backend-api.onrender.com/api/list-projects"
+        const url ="https://proto-secure-backend-api-production.up.railway.app/api/list-projects"
         const res = await axios.get(url)
         console.log("fetchData",res)
         setdata(res.data)
