@@ -94,3 +94,92 @@ export const kakarotSepolia = /*#__PURE__*/ defineChain({
   },
   testnet: true,
 })
+
+export const SwanChain = /*#__PURE__*/ defineChain({
+  id: 20241133,
+  name: 'Swan chain',
+  nativeCurrency: {
+    name: 'Ether',
+    symbol: 'ETH',
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://rpc-proxima.swanchain.io/'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Kakarot Scan',
+      url: 'https://rpc-proxima.swanchain.io/',
+    },
+  },
+  testnet: true,
+})
+
+export const IncoChain = /*#__PURE__*/ defineChain({
+  id: 20241133,
+  name: 'Inco',
+  nativeCurrency: {
+    name: 'inco',
+    symbol: 'INCO',
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://validator.rivest.inco.org/'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Inco Scan',
+      url: 'https://rpc-proxima.swanchain.io/',
+    },
+  },
+  testnet: true,
+})
+
+export const CeloChain = /*#__PURE__*/ defineChain({
+  id: 44787,
+  name: 'Celo',
+  nativeCurrency: {
+    name: 'celo',
+    symbol: 'CELO',
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://alfajores-forno.celo-testnet.org/'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Inco Scan',
+      url: 'https://rpc-proxima.swanchain.io/',
+    },
+  },
+  testnet: true,
+})
+
+//Zircuit
+export const ZircuitTestnet = /*#__PURE__*/ defineChain({
+  id: 48899,
+  name: 'Zircuit',
+  nativeCurrency: {
+    name: 'Ether',
+    symbol: 'ETH',
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://alfajores-forno.celo-testnet.org/'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Inco Scan',
+      url: 'https://rpc-proxima.swanchain.io/',
+    },
+  },
+  testnet: true,
+})

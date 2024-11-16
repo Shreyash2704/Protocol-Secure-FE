@@ -5,6 +5,10 @@ import './CustomTable.css'
 import { ColumnsType,dataType } from '../../Config/types'
 import { Image } from '@chakra-ui/react';
 import { iconMap } from '../../Config/data';
+import { useAccount, useSwitchChain, useTransactionReceipt, useWriteContract } from 'wagmi';
+import { useWeb3Modal } from '@web3modal/wagmi/react';
+import {abi2} from '../../Config/abi'
+import { parseEther } from 'ethers';
 
 type Props = {
     preClass:string,
@@ -14,6 +18,25 @@ type Props = {
 
 
 const CustomTable = ({preClass,columns,data}: Props) => {
+  const { chains, switchChain } = useSwitchChain();
+  const {address, chain}  = useAccount()
+  const { open, close } = useWeb3Modal();
+
+  const {writeContract,data:txHash,error,status} =  useWriteContract();
+  const {data:txReceipt} = useTransactionReceipt();
+  const freezeApp = async(productId:number,stakeAmt:string) =>{
+    try{
+      await writeContract({
+        abi:abi2,
+        address:"0x5a90f477ccfa591Cf6F1849B1F9C685341DE0415",
+        functionName: "submitSecurityAlert",
+        args:[BigInt(productId)],
+        value:parseEther(stakeAmt)
+      })
+    }catch(err){
+      console.error("err",err)
+    }
+  }
   return (
     <div className={`${preClass} table-container`}>
         <table>
@@ -50,12 +73,32 @@ const CustomTable = ({preClass,columns,data}: Props) => {
                         <td>{ele.projectName}</td>
                         <td>{ele.bountyAmt}</td>
                         <td>
-                          {ele.chainID}
-                          <Image src={ele.chainID ? iconMap[ele.chainID] : ""} alt="logo" boxSize={"24px"}/>
+                          {/* {ele.chainID} */}
+                          <Image src={ele.chainID ? iconMap[ele.chainID] : ""} alt="logo" boxSize={"24px"}
+                          sx={{
+                            borderRadius:"50%"
+                          }}
+                          />
                           </td>
                         <td>{ele.status}</td>
                         <td>
+                          {
+                            chain && address ? (
+                              ele.chainID && parseInt(ele.chainID) === chain.id ? 
+                              (<button className='freeze' onClick={async() => await freezeApp(ele.productID,ele.bountyAmt.toString())}>Freeze</button>) : (
+                                <button className='switch-network' onClick={() =>{
+                                  ele.chainID && switchChain({
+                                    chainId:parseInt(ele.chainID)
+                                  })
+                                }}>Switch Network</button>
+                              )
+                            ) : (
+                              <button className='connect-button' onClick={() => open()}>Connect Wallet</button>
+                            )
+                          } 
                           
+                          
+
                         </td>
                     </tr>
                     </>

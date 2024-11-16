@@ -108,15 +108,19 @@ const PauseApp = (props: Props) => {
   };
 
   const callContract = async() =>{
-    console.log("bouty amoutn",data.bountyAmt)
     if (data.bountyAmt !== undefined){
-      console.log("contarct will be called amoutn")
+      console.log("contarct will be called amoutn",parseEther(data.bountyAmt))
     try {
+       //@ts-ignore
         const result = await writeContract({
-          abi2,
+          abi:abi2,
+          address:"0x5a90f477ccfa591Cf6F1849B1F9C685341DE0415",
           functionName: "registerProtocol",
+          //@ts-ignore
           args: [
+             //@ts-ignore
             data.contractAddress,
+             //@ts-ignore
             data.mediatator
           ],
           //@ts-ignore
@@ -142,6 +146,10 @@ const PauseApp = (props: Props) => {
     console.log("callContract hashData",hashData)
    }, [hashData])
   
+   useEffect(() => {
+     console.log("isPending, isSuccess, status",isPending, isSuccess, status)
+   }, [isPending, isSuccess, status])
+   
 
   const Chains = useChains();
   const [selectNetwork, setselectNetwork] = useState<any>(null);
@@ -324,7 +332,9 @@ const PauseApp = (props: Props) => {
             {/* <FormHelperText></FormHelperText> */}
           </FormControl>
 
-          <button className="form-save" disabled={disableBtn} onClick={onSubmit}>
+          <button className="form-save" 
+          disabled={disableBtn} 
+          onClick={onSubmit}>
             Save
           </button>
         </div>

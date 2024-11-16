@@ -1,7 +1,8 @@
 import React from 'react'
 import './LandingPage.css'
 import Header from '../Header/Header'
-
+import logo from '../../assets/app/applogo.svg'
+import { Image } from '@chakra-ui/react'
 type Props = {}
 
 const LandingPage = (props: Props) => {
@@ -9,6 +10,15 @@ const LandingPage = (props: Props) => {
     <div className='LandingPageRoot'>
         <div className="bannerSection">
             <Header />
+            <div className="appSec">
+            <Image 
+               src={logo}
+               boxSize={"160px"}
+               alt={"logo"}
+            />
+            
+            </div>
+            
         </div>
     </div>
   )

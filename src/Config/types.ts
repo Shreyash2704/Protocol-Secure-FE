@@ -131,12 +131,13 @@ type dataType ={
   status: string | null;
   contractAddress: string;
   chainID: string | null;
-  bountyAmt: number;
+  bountyAmt: string;
   tokenSymbol: string;
   mediatator: string;
   createdAt: string; // ISO date string
   updatedAt: string; // ISO date string
   id: string;
+  productID:number;
 }
 export type {
   chainType,

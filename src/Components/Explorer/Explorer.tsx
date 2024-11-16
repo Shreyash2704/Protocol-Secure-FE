@@ -3,28 +3,28 @@ import './Explorer.css'
 import Header from '../Header/Header'
 import CustomTable from '../CustomTable/CustomTable'
 import tableData from './tabledata.json'
-import { ColumnsType } from '@/Config/types'
+import { ColumnsType, dataType } from '../../Config/types'
 import axios from 'axios'
 type Props = {}
 
 const columns = tableData["Columns"] as ColumnsType
 
-type dataType ={
-        guid: string;
-        projectName: string;
-        email: string | null;
-        logoURL: string;
-        transactionHash: string | null;
-        status: string | null;
-        contractAddress: string;
-        chainID: string | null;
-        bountyAmt: number;
-        tokenSymbol: string;
-        mediatator: string;
-        createdAt: string; // ISO date string
-        updatedAt: string; // ISO date string
-        id: string;
-}
+// type dataType ={
+//         guid: string;
+//         projectName: string;
+//         email: string | null;
+//         logoURL: string;
+//         transactionHash: string | null;
+//         status: string | null;
+//         contractAddress: string;
+//         chainID: string | null;
+//         bountyAmt: number;
+//         tokenSymbol: string;
+//         mediatator: string;
+//         createdAt: string; // ISO date string
+//         updatedAt: string; // ISO date string
+//         id: string;
+// }
 const Explorer = (props: Props) => {
 
     const [data, setdata] = useState<null | dataType[]>(null)
