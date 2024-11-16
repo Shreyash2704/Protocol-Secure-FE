@@ -34,7 +34,7 @@
     outline: none;
     border: none;
     box-shadow: none;
-    background-color: #3C4145;
+    background-color: #424040;
     font-family: Inter;
     font-size: 14px;
     font-weight: 400;
@@ -44,5 +44,64 @@
     text-decoration-skip-ink: none;
     color:#A4ACB9;
     box-shadow: 0px 0px 0px 1px #FFFFFF21, 0px 1px 2px 0px #EEEFF114;
-
+}
+.chakra-form-control .chakra-input::placeholder{
+    color:#A4ACB9;
+}
+.chakra-menu__menu-button{
+    background-color: #424040 !important;
+    width: 310px;
+    box-shadow: 0px 0px 0px 1px #FFFFFF21, 0px 1px 2px 0px #EEEFF114;
+}
+.chakra-menu__menu-button span{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    display: flex !important;
+    column-gap: 8px;
+    align-items: center;
+    color: #FFFFFF61;
+}
+.chakra-menu__menu-button span img{
+    border-radius: 50%;
+}
+.chakra-menu__menu-list{
+    box-shadow: 0px 0px 0px 1px #FFFFFF21, 0px 1px 2px 0px #EEEFF114 !important;
+    background-color: #424040 !important;
+    width: 310px;
+    border: none;
+}
+.chakra-menu__menu-list button{
+    background-color: #424040;
+    color: #FFFFFF61;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.chakra-menu__menu-list button span{
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+}
+.chakra-menu__menu-list button span img{
+    border-radius: 50%;
+}
+.form label{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#D3D3D3;
+    margin:0px 12px 8px 0px;
 }

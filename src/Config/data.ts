@@ -279,6 +279,19 @@ const ChainJsonData: Networks = {
   "explorerAddress":"https://explorer-testnet.soneium.org/address/"
  }
 };
+const MAINTAINER_ENUM = {
+  GOV: {
+    'address':'',
+    'label':'gov'
+  },
+  SEAL911:{
+    'address':'',
+    'label':'seal_911'
+  },
+  PROTO_SECURE:{
+    'address':'',
+    'label':'proto_secure'
+  } 
+};
 
-
-export { iconMap, ChainJsonData };
+export { iconMap, ChainJsonData, MAINTAINER_ENUM };
