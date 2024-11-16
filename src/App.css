@@ -1,7 +1,9 @@
 .App{
   /* background-color: #f8f8f8; */
-  background-color: #FFFCF1;
+  background-color: #424040;
   max-width: 100%;
+  padding: 0px 70px;
+  width: calc(100%);
   padding-bottom: 200px;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;

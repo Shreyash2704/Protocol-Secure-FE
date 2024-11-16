@@ -1,0 +1,146 @@
+
+.table-container{
+    width: 98%;
+    border-radius: 12px;
+    border: 1px solid #E4E7EC;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    margin: 20px auto;
+}
+.table-container table{
+    width: 100%;
+    border: none;
+    /* margin-bottom: 20px; */
+    font-family: sans-serif;
+    border-radius: 12px;
+    overflow: hidden;
+    
+}
+.table-container table thead{
+    border-radius: 12px 12px 0px 0px;
+}
+.table-container table tbody{
+    border-radius: 0px 0px 12px 12px;
+}
+.table-container table tbody tr:last-child{
+    border-radius: 0px 0px 12px 12px;
+}
+.table-container table thead tr th:nth-child(1){
+    border-radius: 12px 0px 0px 0px;
+}
+.table-container table thead tr th:nth-child(6){
+    border-radius: 0px 12px 0px 0px;
+}
+.table-container table tbody tr:last-child td:nth-child(1){
+    border-radius: 0px 0px 0px 12px;
+}
+.table-container table tbody tr:last-child td:nth-child(6){
+    border-radius: 0px 0px 12px 0px;
+}
+.table-container table thead tr{
+    background-color:rgb(255, 255, 255);
+    color:#000;
+    font-size: 12px;
+}
+.table-container table thead tr th{
+    padding: 12px 24px;
+    text-align: start;
+    padding: 12px 24px 12px 24px;
+    border-bottom: 1px solid #E4E7EC;   
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: #475467;
+    
+}
+.table-container table tbody tr td{
+    padding: 12px 24px 12px 24px;
+    text-align: start;
+}
+.table-container table tbody tr:nth-child(odd){
+    background-color: #F9FAFB;
+    ;
+}
+.table-container table tbody tr td:nth-child(1),
+.table-container table thead tr th:nth-child(1){
+    /* width:151px; */
+}
+.table-container table tbody tr td:nth-child(2),
+.table-container table thead tr th:nth-child(2){
+    /* width:121px; */
+}
+.table-container table tbody tr td:nth-child(3),
+.table-container table thead tr th:nth-child(3){
+    /* width:155px; */
+}
+.table-container table tbody tr td:nth-child(4),
+.table-container table thead tr th:nth-child(4),
+.table-container table tbody tr td:nth-child(5),
+.table-container table thead tr th:nth-child(5){
+    /* width:266px; */
+}
+.table-container table tbody tr td:nth-child(6),
+.table-container table thead tr th:nth-child(6){
+    /* width:267px; */
+    
+}
+.table-container table tbody tr td:nth-child(6){
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+.table-container table tbody tr:last-child td .table-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.table-container table tbody tr:last-child .btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* column-gap: 10px; */
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    padding: 8px 12px 8px 12px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    color: #344054;
+    min-width:84px;
+    height:36px;
+    width: fit-content;
+    justify-content: space-around;
+}
+.table-container table tbody tr:last-child .btns.previous{
+    min-width:111px
+}
+.table-container table tbody tr:last-child .btns.next{
+    margin-left: auto;
+}
+.table-container table tbody tr:last-child .btns img.next-arrow{
+    transform: rotate(180deg);
+}
+.table-container table tbody tr:last-child .btns:disabled{
+    opacity: 0.8;
+    background-color: #f1f1f1;
+    pointer-events: none;
+}
+
+.table-container table tbody tr{
+    background-color: #fff;
+    border-bottom: 1px solid #E2E8F0;
+    font-size: 14px;
+    color: #444;
+}
+.table-container table{
+    border-collapse: collapse;
+}

@@ -1,0 +1,23 @@
+{
+    "Columns":[
+        {
+            "label":"GUID"
+        },
+        {
+            "label":"Project Name"
+        },
+        {
+            "label":"Logo URL"
+        },
+        {
+            "label":"bounty AMT(in token)"
+        },
+        {
+            "label":"Column5"
+        },
+        {
+            "label":"Column6"
+        }
+    ]
+}
+ 

@@ -22,7 +22,7 @@ import {
   arbitrumSepolia,
   morphSepolia,
   //kakarotSepolia,
-  berachainTestnet,
+  berachainTestnet
   
 } from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

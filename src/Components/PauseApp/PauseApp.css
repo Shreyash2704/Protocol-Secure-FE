@@ -1,0 +1,48 @@
+.PauseAppRoot{
+    display: flex;
+}
+.form{
+    width: 310px;
+}
+.headline{
+    font-family: Instrument Serif;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 56px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#fff;
+}
+.chakra-form-control{
+    max-width: 100%;
+    width: 100%;
+}
+.chakra-form-control .chakra-form__label{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:  #D3D3D3;    
+}
+.chakra-form-control .chakra-input,
+.chakra-form-control .chakra-input:focus-visible{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: #3C4145;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#A4ACB9;
+    box-shadow: 0px 0px 0px 1px #FFFFFF21, 0px 1px 2px 0px #EEEFF114;
+
+}
