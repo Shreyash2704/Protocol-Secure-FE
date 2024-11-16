@@ -26,7 +26,7 @@ import { useWeb3Modal } from "@web3modal/wagmi/react";
 type Props = {};
 
 type obj = {
-  chainId: any;
+  chainID: any;
   contractAddress: string;
   projectName: string;
   logoURL: string;
@@ -38,7 +38,7 @@ type obj = {
 };
 const PauseApp = (props: Props) => {
   const initialVal: obj = {
-    chainId: null,
+    chainID: null,
     contractAddress: "",
     projectName: "",
     logoURL: "",
@@ -59,7 +59,7 @@ const PauseApp = (props: Props) => {
 
   const AllFilled = () => {
     if (
-      data.chainId != "" &&
+      data.chainID != "" &&
       data.bountyAmt !== "" &&
       data.contractAddress !== "" &&
     //   data.email !== "" &&
@@ -99,16 +99,6 @@ const PauseApp = (props: Props) => {
   }
   const callApi = async (obj:any) => {
     const url = "https://proto-secure-backend-api-production.up.railway.app/api/submit-form";
-    // const body = {
-    //   projectName: "yes is good",
-    //   logoURL: "NO",
-    //   bountyAmt: 201230,
-    //   tokenSymbol: "ETH",
-    //   mediatator: "yes",
-    //   status: "active",
-    //   email: "",
-    //   contractAddress: "1233245456",
-    // };
     const res = await axios.post(url, obj);
     console.log("res",res)
     if(res.status === 200){
@@ -120,11 +110,11 @@ const PauseApp = (props: Props) => {
   const callContract = async() =>{
     console.log("bouty amoutn",data.bountyAmt)
     if (data.bountyAmt !== undefined){
-
+      console.log("contarct will be called amoutn")
     try {
         const result = await writeContract({
           abi2,
-          functionName: "bridgeTo",
+          functionName: "registerProtocol",
           args: [
             data.contractAddress,
             data.mediatator
@@ -225,7 +215,7 @@ const PauseApp = (props: Props) => {
                       <>
                         <MenuItem
                           onClick={() => {
-                            handleOnChange("chainId", String(ele.id));
+                            handleOnChange("chainID", String(ele.id));
                             setselectNetwork(ele);
                             handleOnChange("tokenSymbol",ele.nativeCurrency.symbol)
                           }}

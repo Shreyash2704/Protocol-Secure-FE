@@ -26,9 +26,10 @@ const Header = (props: Props) => {
             
         </div>
         <div className="rightSection">
-            <button className='initite-freeze'>Initiate Freeze</button>
-            <button className='list-protocol'>List Protocol</button>
-            <button className='connect-wallet'
+            <a className='explorer' href="/explorer">Explorer</a>
+            <a className='initite-freeze' href="/">Initiate Freeze</a>
+            <a className='list-protocol' href="/listProtocol">List Protocol</a>
+            {/* <a className='connect-wallet'
              onClick={() =>{ 
                 if(address){
                     
@@ -36,7 +37,7 @@ const Header = (props: Props) => {
                     open()
                 }
                 
-                }}>{address ? address : "Connect Wallet"}</button>
+                }}>{address ? address : "Connect Wallet"}</button> */}
                 <w3m-button />
         </div>
     </div>
