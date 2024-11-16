@@ -116,6 +116,12 @@ interface rewardsType {
   reward: number;
   rewardInUsd: Number;
 }
+
+type ColumnType = {
+  [key:string]:string
+}
+type ColumnsType = ColumnType[]
+
 export type {
   chainType,
   Network,
@@ -130,5 +136,7 @@ export type {
   LiquidityPoolBalance,
   PortfolioListReturnType,
   TotalChainVolume,
-  rewardsType
+  rewardsType,
+  ColumnsType,
+  ColumnType
 };

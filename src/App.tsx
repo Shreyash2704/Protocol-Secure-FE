@@ -11,6 +11,7 @@ import FormStore from "./Config/Store/FormStore";
 import CustomTable from "./Components/CustomTable/CustomTable";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import PauseApp from "./Components/PauseApp/PauseApp";
+import Explorer from "./Components/Explorer/Explorer";
 
 const App = observer(() => {
 
@@ -27,7 +28,7 @@ const App = observer(() => {
                   {/* <Header /> */}
                   {/* <BridgeNew /> */}
                   <LandingPage />
-                  <CustomTable preClass="cc"/>
+                  {/* <CustomTable preClass="cc"/> */}
                 </>
               }
             />
@@ -40,15 +41,14 @@ const App = observer(() => {
               }
             />
 
-            {/* { <Route
-              path="/liquidity"
+             <Route
+              path="/explorer"
               element={
                 <>
-                  <Header />
-                  <Liquidity />
+                  <Explorer />
                 </>
               }
-            /> -->} */}
+            /> 
 
             <Route path="*" element={<>Page Not Found!</>} />
           </Routes>

@@ -2,19 +2,21 @@ import React from 'react'
 import arrowLeft from "../../assets/arrow-left.svg";
 import tableData from './tables.json'
 import './CustomTable.css'
+import { ColumnsType } from '../../Config/types'
 
 type Props = {
     preClass:string,
-
+    columns:ColumnsType
 }
 
-const CustomTable = ({preClass}: Props) => {
+
+const CustomTable = ({preClass,columns}: Props) => {
   return (
     <div className={`${preClass} table-container`}>
         <table>
           <thead>
             <tr>
-              {tableData.Columns.map((ele) =>{
+              {columns.map((ele) =>{
                 return(
                     <>
                     <th>{ele.label}</th>
@@ -34,13 +36,6 @@ const CustomTable = ({preClass}: Props) => {
                   </td>
                   <td>
                     
-                  </td>
-                  <td>
-                    
-                  </td>
-
-                  <td>
-                   
                   </td>
                   <td></td>
                 </tr>

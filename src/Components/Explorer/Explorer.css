@@ -1,0 +1,64 @@
+.ExplorerRoot{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.SearchProject{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.SearchProject input{
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 0px 1px #FFFFFF21, 0px 1px 2px 0px #EEEFF114;
+    background-color: #424040;
+    padding:10px 16px;
+    color: #cfcfcf;
+    font-family: SF Pro Display;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    border-radius: 6px;
+    width: 440px;
+}
+.SearchProject button{
+    background-color: #FC74FE;
+    border: 1px solid #F7B0F8;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+.ExplorerRoot .explorer table thead tr{
+    background-color: #1B1B1B;
+}
+.ExplorerRoot .explorer table tbody tr{
+    background-color: #424040;
+
+}
+.ExplorerRoot .explorer{
+    max-width: 1280px;
+    width: 100%;
+}
+.ExplorerRoot .explorer table,
+.ExplorerRoot .explorer table thead,
+.ExplorerRoot .explorer table tbody,
+.ExplorerRoot .explorer table tr,
+.ExplorerRoot .explorer table th,
+.ExplorerRoot .explorer.table-container{
+    border:none;
+}

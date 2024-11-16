@@ -1,0 +1,16 @@
+{
+    "Columns":[
+        {
+            "label":"Project Name"
+        },
+        {
+            "label":"staked Amount"
+        },
+        {
+            "label":"Networks"
+        },
+        {
+            "label":"Status"
+        }
+    ]
+}

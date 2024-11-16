@@ -1,8 +1,14 @@
 .PauseAppRoot{
     display: flex;
+    padding-top: 100px;
+    margin:0px auto;
+    width:calc(100% - 140px)
 }
 .form{
     width: 310px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
 .headline{
     font-family: Instrument Serif;
@@ -30,7 +36,8 @@
     color:  #D3D3D3;    
 }
 .chakra-form-control .chakra-input,
-.chakra-form-control .chakra-input:focus-visible{
+.chakra-form-control .chakra-input:focus-visible,
+.chakra-form-control .chakra-input:-internal-autofill-selected{
     outline: none;
     border: none;
     box-shadow: none;
@@ -86,12 +93,12 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-.chakra-menu__menu-list button span{
+.chakra-menu__menu-list button{
     display: flex;
     flex-direction: row;
     column-gap: 8px;
 }
-.chakra-menu__menu-list button span img{
+.chakra-menu__menu-list button img{
     border-radius: 50%;
 }
 .form label{
@@ -103,5 +110,21 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color:#D3D3D3;
-    margin:0px 12px 8px 0px;
+    /* margin:0px 12px 8px 0px; */
+}
+.form .form-save{
+    padding: 10px 16px;
+    background-color: #FC74FE;
+    border: 1px solid #F7B0F8;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    color:#ffffff66;
+    border-radius: 5px;
+}
+.form .form-save:disabled{
+    background-color: #FC74FE66;
+    pointer-events: none;
 }
