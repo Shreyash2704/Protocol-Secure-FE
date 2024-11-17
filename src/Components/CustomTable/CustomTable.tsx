@@ -28,7 +28,7 @@ const CustomTable = ({preClass,columns,data}: Props) => {
     try{
       await writeContract({
         abi:abi2,
-        address:"0x5a90f477ccfa591Cf6F1849B1F9C685341DE0415",
+        address:"0x1781ce9307FE2524823c7cc86927C6B5125f0b60",
         functionName: "submitSecurityAlert",
         args:[BigInt(productId)],
         value:parseEther(stakeAmt)
